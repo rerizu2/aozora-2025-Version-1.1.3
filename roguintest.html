@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>支援級ログイン画面</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .settings-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+        }
+
+        .settings-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        label {
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #message {
+            color: red;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 設定ボタン -->
+    <div class="settings-button">
+        <a href="ログイン設定.html">
+            <img src="設定2024.png" alt="設定">
+        </a>
+    </div>
+
+    <div class="login-container">
+        <h2>ログイン</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="username">あなたの【@e-net.nara.jp】:</label>
+                <input type="text" id="username" name="username" placeholder="@e-net.nara.jp" required>
+            </div>
+            <div class="input-group">
+                <label for="password">パスワード:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">ログイン</button>
+            <p id="message"></p>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const usernameInput = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const message = document.getElementById('message');
+
+            // @e-net.nara.jpを自動的に追加
+            const username = usernameInput.includes('@e-net.nara.jp') ? usernameInput : usernameInput + '@e-net.nara.jp';
+
+            // 有効なユーザー名リスト
+            const validUsernames = [
+                'jyj-000-cpr@e-net.nara.jp',
+                'gjr-750-ppm@e-net.nara.jp',
+                'sbd-690-cgr@e-net.nara.jp',
+                'cpv-390-byj@e-net.nara.jp',
+                'fgm-330-fct@e-net.nara.jp',
+                'rhd-060-jrk@e-net.nara.jp',
+                'gmb-140-kfc@e-net.nara.jp',
+                'cpv-970-fdc@e-net.nara.jp',
+                'mkb-770-zrv@e-net.nara.jp',
+                'vgn-140-cbg@e-net.nara.jp',
+                'gmb-550-pdg@e-net.nara.jp',
+                'kmv-730-ybv@e-net.nara.jp',
+                'bth-380-mpt@e-net.nara.jp',
+                'kmv-310-nbh@e-net.nara.jp',
+                'mkb-250-pgh@e-net.nara.jp',
+                'rhd-090-ynh@e-net.nara.jp',
+                'wkw-010-ypd@e-net.nara.jp',
+                'bbm-360-bmr@e-net.nara.jp',
+                'Aozora@e-net.nara.jp'
+            ];
+
+            // パスワードの検証
+            if (validUsernames.includes(username) && password === 'JuTBT') {
+                message.style.color = 'green';
+                message.textContent = 'ログイン成功！';
+                // 2秒後に別のURLにリダイレクト
+                setTimeout(() => {
+                    window.location.href = 'ホームページ.html'; // リダイレクト先のURLに変更
+                }, 2000);
+            } else {
+                message.style.color = 'red';
+                message.textContent = 'ユーザー名またはパスワードが違います。';
+            }
+        });
+    </script>
+</body>
+</html>

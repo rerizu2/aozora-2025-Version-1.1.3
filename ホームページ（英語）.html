@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue sky homepage</title>
+    <style>
+        /* リセットCSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ボディのスタイル */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* ヘッダーのスタイル */
+        header {
+            position: relative;
+            background-color: #22a6bb;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* 歯車マークのスタイル */
+        .gear-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        /* 歯車マークのイメージ */
+        .gear-icon img {
+            width: 250%;
+            height: 250%;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* セクションのスタイル */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section#home {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        section#contact {
+            background-color: #fff;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #22a6bb;
+        }
+
+        /* フッターのスタイル */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* レスポンシブデザイン */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+    <a href="設定（英語）.html" class="gear-icon">
+        <img src="設定.png" alt="設定" title="Setting">
+    </a>
+    <h1>Blue sky homepage</h1>
+    <nav>
+        <ul>
+            <li><a href="ホームページ（英語）.html">Home</a></li>
+            <li><a href="時間割2024（英語）.html">Blue Sky 2024 Timetable</a></li>
+            <li><a href="青空イベント（英語）.html">Blue sky ecent</a></li>
+            <li><a href="青空紹介（英語）.html">Blue sky introduction</a></li>
+            <li><a href="青空の生活（英語）.html">Life in the blue sky</a></li>
+            <li><a href="お問い合わせ（英語）.html">lnquiries</a></li>
+            <li><a href="最新情報（英語）.html">The latest information on the blue sky</a></li>
+            <li><a href="田原本中学校（英語）.html">Go to the homepage of Tawaramoto Junior High School</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- ホームセクション -->
+    <section id="home">
+        <h2>Welcome to the Aozora website</h2>
+        <p>Hello, this homepage is used for blue sky events and blue sky introductions. If this website does not work, please contact us or ask Itimasa, the administrator, directly.</p>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; Blue skies 2024</p>
+    </footer>
+</body>
+</html>

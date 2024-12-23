@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue sky homepage</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* リセットCSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ボディのスタイル */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* ヘッダーのスタイル */
+        header {
+            background-color: #22a6bb;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* セクションのスタイル */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section#home {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #22a6bb;
+        }
+
+        .project {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            text-align: left;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* フッターのスタイル */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* レスポンシブデザイン */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>Blue sky homepage</h1>
+    <nav>
+        <ul>
+            <li><a href="ホームページ（英語）.html">Home</a></li>
+            <li><a href="時間割2024（英語）.html">Blue Sky 2024 Timetable</a></li>
+            <li><a href="青空イベント（英語）.html">Blue sky ecent</a></li>
+            <li><a href="青空紹介（英語）.html">Blue sky introduction</a></li>
+            <li><a href="青空の生活（英語）.html">Life in the blue sky</a></li>
+            <li><a href="お問い合わせ（英語）.html">lnquiries</a></li>
+            <li><a href="最新情報（英語）.html">The latest information on the blue sky</a></li>
+            <li><a href="田原本中学校（英語）.html">Go to the homepage of Tawaramoto Junior High School</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <!-- ホームセクション -->
+    <section id="home">
+        <h2>Blue sky event table</h2>
+        <p>This is the event table of the blue sky.</p>
+    </section>
+
+    <!-- イベントセクション -->
+    <section>
+        <h2>Event table</h2>
+        <div class="project">
+            <button id="eventButton0">
+                <h3>Blue Sky Summer Vacation Event mid-August</h3>
+                <p>I have posted a photo of the summer vacation event of the blue sky student [Nagisi Somen].</p>
+            </button>
+            
+            <button id="eventButton1">
+                <h3>Blue sky English Sugoroku mid-October</h3>
+                <p>[English Sugoroku] This English Sugoroku will be held by all grades in the blue sky will be displayed on TV on the day!</p>
+            </button>
+        
+            <button id="eventButton2">
+                <h3>Blue sky exchange meeting Friday.November 29</h3>
+                <p>The Aozora Exchange Meeting is an exchange meeting held in Isoki-gun (Shikishita Junior High School, Tawaramoto Junior High School, Tawaramoto Kita Junior High School).</p>
+            </button>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy;青空 2024</p>
+    </footer>
+
+    <script>
+        // イベントボタンのリンク設定
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('eventButton0').addEventListener('click', () => {
+                window.location.href = '流し素麺2024(英語).html';
+            });
+            document.getElementById('eventButton1').addEventListener('click', () => {
+                window.location.href = 'サイコロ写真（英語）.html';
+            });
+            document.getElementById('eventButton2').addEventListener('click', () => {
+                window.location.href = '交流2024（英語）.html';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue sky homepage</title>
+    <style>
+        /* リセットCSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ボディのスタイル */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* ヘッダーのスタイル */
+        header {
+            background-color: #22a6bb;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* スライドスイッチのスタイル */
+        .language-switch-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+
+        .language-switch {
+            width: 200px;
+            height: 40px;
+            background-color: #ddd;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #bbb;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .language-switch .slider {
+            width: 50%;
+            height: 100%;
+            background-color: #22a6bb;
+            border-radius: 20px;
+            position: absolute;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            transition: left 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .language-switch .labels {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .language-switch .labels span {
+            pointer-events: none; /* ラベルをクリック不可にする */
+        }
+
+        /* 決定ボタンのスタイル */
+        .confirm-button {
+            padding: 10px 20px;
+            background-color: #22c6bb;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .confirm-button:hover {
+            background-color: #22a6bb;
+        }
+
+        /* メッセージのスタイル */
+        .message {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #22a6bb;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        /* フッターのスタイル */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>Blue sky homepage</h1>
+    <nav>
+        <ul>
+            <li><a href="ホームページ（英語）.html">Home</a></li>
+            <li><a href="時間割2024（英語）.html">Blue Sky 2024 Timetable</a></li>
+            <li><a href="青空イベント（英語）.html">Blue sky ecent</a></li>
+            <li><a href="青空紹介（英語）.html">Blue sky introduction</a></li>
+            <li><a href="青空の生活（英語）.html">Life in the blue sky</a></li>
+            <li><a href="お問い合わせ（英語）.html">lnquiries</a></li>
+            <li><a href="最新情報（英語）.html">The latest information on the blue sky</a></li>
+            <li><a href="田原本中学校（英語）.html">Go to the homepage of Tawaramoto Junior High School</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <!-- スライドスイッチセクション -->
+    <section class="language-switch-container">
+        <div class="language-switch" id="language-switch">
+            <div class="labels">
+                <span>日本語</span>
+                <span>English</span>
+            </div>
+            <div class="slider" id="slider">日本語</div>
+        </div>
+        <button class="confirm-button" id="confirm-button">決定</button>
+        <div class="message" id="message"></div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const languageSwitch = document.getElementById('language-switch');
+            const slider = document.getElementById('slider');
+            const confirmButton = document.getElementById('confirm-button');
+            const message = document.getElementById('message');
+            let isJapanese = true;
+
+            // スイッチをクリックして言語を切り替え
+            languageSwitch.addEventListener('click', () => {
+                isJapanese = !isJapanese;
+                slider.textContent = isJapanese ? '日本語' : 'English';
+                slider.style.left = isJapanese ? '0' : '50%';
+            });
+
+            // 決定ボタンのクリックイベント
+            confirmButton.addEventListener('click', () => {
+                const selectedLanguage = isJapanese ? '日本語' : 'English';
+                message.textContent = `The language will be set to${selectedLanguage}in 2 seconds.`;
+                setTimeout(() => {
+                    window.location.href = isJapanese ? 'ホームページ.html' : 'ホームページ.html';
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青空ホームページ</title>
+    <style>
+        /* リセットCSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ボディのスタイル */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* スライドスイッチのスタイル */
+        .language-switch-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 300px;
+        }
+
+        .language-switch {
+            width: 200px;
+            height: 40px;
+            background-color: #ddd;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #bbb;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .language-switch .slider {
+            width: 50%;
+            height: 100%;
+            background-color: #22a6bb;
+            border-radius: 20px;
+            position: absolute;
+            left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            transition: left 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .language-switch .labels {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .language-switch .labels span {
+            pointer-events: none; /* ラベルをクリック不可にする */
+        }
+
+        /* 決定ボタンのスタイル */
+        .confirm-button {
+            padding: 10px 20px;
+            background-color: #22c6bb;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .confirm-button:hover {
+            background-color: #22a6bb;
+        }
+
+        /* メッセージのスタイル */
+        .message {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #22a6bb;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- スライドスイッチセクション -->
+    <section class="language-switch-container">
+        <div class="language-switch" id="language-switch">
+            <div class="labels">
+                <span>日本語</span>
+                <span>English</span>
+            </div>
+            <div class="slider" id="slider">日本語</div>
+        </div>
+        <button class="confirm-button" id="confirm-button">決定</button>
+        <div class="message" id="message"></div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const languageSwitch = document.getElementById('language-switch');
+            const slider = document.getElementById('slider');
+            const confirmButton = document.getElementById('confirm-button');
+            const message = document.getElementById('message');
+            let isJapanese = true;
+
+            // スイッチクリックで切り替え
+            languageSwitch.addEventListener('click', () => {
+                isJapanese = !isJapanese;
+                slider.textContent = isJapanese ? '日本語' : 'English';
+                slider.style.left = isJapanese ? '0' : '50%';
+            });
+
+            // 決定ボタンのクリックイベント
+            confirmButton.addEventListener('click', () => {
+                const selectedLanguage = isJapanese ? '日本語' : 'English';
+                if (isJapanese) {
+                    message.textContent = '2秒後に日本語設定になります。';
+                    setTimeout(() => {
+                        window.location.href = 'roguintest.html';
+                    }, 2000);
+                } else {
+                    message.textContent = '2秒後にEnglish設定になります。';
+                    setTimeout(() => {
+                        window.location.href = 'roguintest（英語）.html';
+                    }, 2000);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>青空ホームページ</title>
+    <style>
+        /* リセットCSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ボディのスタイル */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* ヘッダーのスタイル */
+        header {
+            position: relative;
+            background-color: #22a6bb;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        /* 歯車マークのスタイル */
+        .gear-icon {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        /* 歯車マークのイメージ */
+        .gear-icon img {
+            width: 250%;
+            height: 250%;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* セクションのスタイル */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section#home {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        section#contact {
+            background-color: #fff;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #22a6bb;
+        }
+
+        /* フッターのスタイル */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* レスポンシブデザイン */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+    <a href="設定.html" class="gear-icon">
+        <img src="設定2024.png" alt="設定" title="設定">
+    </a>
+    <h1>青空ホームページ</h1>
+    <nav>
+        <ul>
+            <li><a href="ホームページ.html">ホーム</a></li>
+            <li><a href="時間割2024.html">青空 2024年 時間割表</a></li>
+            <li><a href="青空イベント.html">青空イベント</a></li>
+            <li><a href="青空紹介.html">青空紹介</a></li>
+            <li><a href="青空の生活.html">青空の生活</a></li>
+            <li><a href="お問い合わせ.html">お問い合わせ</a></li>
+            <li><a href="最新情報.html">青空最新情報</a></li>
+            <li><a href="田原本中学校.html">田原本中学校ホームページへ</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+    <!-- ホームセクション -->
+    <section id="home">
+        <h2>ようこそ青空のホームページへ</h2>
+        <p>こんにちは、こちらのホームページは、青空のイベントや青空紹介などに使われるホームページです。もし、こちらのホームページがうまくいかないときは、お問い合わせをするか、直接管理者の一政さんに頼むかをしてください。</p>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; 青空 2024</p>
+    </footer>
+</body>
+</html>

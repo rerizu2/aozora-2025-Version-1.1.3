@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue sky homepage</title>
+    <style>
+         /* リセットCSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* ボディのスタイル */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* ヘッダーのスタイル */
+        header {
+            background-color: #22a6bb;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* セクションのスタイル */
+        section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section#home {
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #22a6bb;
+        }
+
+        .project {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            text-align: left;
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        button:hover {
+            background-color: #e0e0e0;
+        }
+
+        /* フッターのスタイル */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* レスポンシブデザイン */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <h1>Blue sky homepage</h1>
+    <nav>
+        <ul>
+            <li><a href="ホームページ（英語）.html">Home</a></li>
+            <li><a href="時間割2024（英語）.html">Blue Sky 2024 Timetable</a></li>
+            <li><a href="青空イベント（英語）.html">Blue sky ecent</a></li>
+            <li><a href="青空紹介（英語）.html">Blue sky introduction</a></li>
+            <li><a href="青空の生活（英語）.html">Life in the blue sky</a></li>
+            <li><a href="お問い合わせ（英語）.html">lnquiries</a></li>
+            <li><a href="最新情報（英語）.html">The latest information on the blue sky</a></li>
+            <li><a href="田原本中学校（英語）.html">Go to the homepage of Tawaramoto Junior High School</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <!-- ホームセクション -->
+    <section id="home">
+        <h2>Aozora Daily Activities Chart</h2>
+<p>This is Aozora's daily activities chart. </p>
+    </section>
+
+    <!-- プロジェクトセクション -->
+    <section>
+        <h2>Life Table</h2>
+        <div class="project">
+            <button id="eventButton0">
+                <h3>Aozora Picture Diary</h3>
+<p>This is the summer vacation picture diary of the second-year Aozora students. It looks like the second-year students had a great time. </p>
+            </button>
+            
+　　　　　　<button id="eventButton1">
+                <h3>Aozora Artworks</h3>
+<p>These are art works created by members of Aozora. They include horror art, beautiful art, and more. </p>
+            </button>
+            
+            <button id="eventButton2">
+                <h3>Aozora Sweet Potato Harvest October 22nd</h3>
+<p>Photo of Aozora members harvesting and eating the sweet potatoes they grew</p>
+            </button>
+
+            <button id="eventButton3">
+                <h3>Aozora Christmas Creations</h3>
+<p>Here are photos of trees and other creations made by members of Aozora. </p>
+                <button id="eventButton4">
+                <h3>Aozora: Making Dried Persimmons</h3>
+<p>Here are some photos of the members of Aozora making dried persimmons. Please try making them at home too♪</p>
+            </button>
+                
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer>
+        <p>&copy; Blue skies 2024</p>
+    </footer>
+
+    <script>
+        // 生活表ボタンのクリックイベント
+        document.getElementById('eventButton0').addEventListener('click', () => {
+            window.location.href = '絵日記2024（英語）.html';
+        });
+        
+        document.getElementById('eventButton1').addEventListener('click', () => {
+            window.location.href = '絵2024（英語）.html';
+        });
+
+        document.getElementById('eventButton2').addEventListener('click', () => {
+            window.location.href = 'さつまいも2024（英語）.html';
+        });
+
+        document.getElementById('eventButton3').addEventListener('click', () => {
+            window.location.href = 'クリスマスカード2024（英語）.html';
+        });
+
+        document.getElementById('eventButton4').addEventListener('click', () => {
+            window.location.href = '干し柿2024（英語）.html';
+        });
+    </script>
+</body>
+</html>
